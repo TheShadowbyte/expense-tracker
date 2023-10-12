@@ -1,14 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-import './components/ExpenseItem';
-import ExpenseItem from "./components/ExpenseItem";
+import Expenses from "./components/Expenses";
 
 function App() {
+
   return (
     <div className="App">
-        <ExpenseItem></ExpenseItem>
+        <Expenses />
     </div>
   );
+
 }
 
 export default App;
