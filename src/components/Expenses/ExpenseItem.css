@@ -4,7 +4,7 @@
     align-items: center;
     padding: 0.5rem;
     margin: 1rem 0;
-    background-color: #4b4b4b;
+    background-color: #3A3F4B; /* Secondary background */
 }
 
 .expense-item__description {
@@ -18,21 +18,50 @@
 }
 
 .expense-item h2 {
-    color: #3a3a3a;
+    color: #E1E5EA; /* Light grayish-blue for text */
     font-size: 1rem;
     flex: 1;
     margin: 0 1rem;
-    color: white;
 }
 
 .expense-item__price {
     font-size: 1rem;
     font-weight: bold;
-    color: white;
-    background-color: #40005d;
-    border: 1px solid white;
+    color: #E1E5EA; /* Light grayish-blue for text */
+    background-color: #00796B; /* Deep teal for highlight */
+    border: 1px solid #E1E5EA; /* Border color */
     padding: 0.5rem;
+    border-radius: 5px;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #00796B; /* Deep teal */
+    background-color: #00796B; /* Deep teal */
+    color: #E1E5EA; /* Light grayish-blue text color */
     border-radius: 12px;
+    margin-right: 1rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* For hover and active effects */
+}
+
+button:hover,
+button:active {
+    background-color: #005D56; /* Slightly darker teal */
+    border-color: #005D56;
+}
+
+button.alternative {
+    color: #E1E5EA; /* Light grayish-blue text color */
+    border-color: transparent;
+    background-color: transparent;
+}
+
+button.alternative:hover,
+button.alternative:active {
+    background-color: #282c34; /* Primary background color */
+    color: #00796B; /* Deep teal for text on hover */
 }
 
 @media (min-width: 580px) {

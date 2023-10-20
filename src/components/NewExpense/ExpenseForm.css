@@ -4,23 +4,35 @@
     gap: 1rem;
     margin-bottom: 1rem;
     text-align: left;
+    background-color: #3A3F4B; /* Secondary background from earlier */
 }
 
 .new-expense__control label {
     font-weight: bold;
     margin-bottom: 0.5rem;
     display: block;
+    color: #E1E5EA; /* Light grayish-blue text color from earlier */
 }
 
 .new-expense__control input {
     font: inherit;
     padding: 0.5rem;
     border-radius: 6px;
-    border: 1px solid #ccc;
+    border: 1px solid #00796B; /* Using the deep teal for border accent */
+    background-color: #282c34; /* Primary background color */
+    color: #E1E5EA; /* Light grayish-blue text color from earlier */
     width: 20rem;
     max-width: 100%;
+    transition: border 0.3s ease, background-color 0.3s ease; /* For hover effect */
+}
+
+.new-expense__control input:hover,
+.new-expense__control input:focus {
+    border: 1px solid #E1E5EA; /* On hover or focus, lighten the border */
+    background-color: #3A3F4B; /* On hover or focus, lighten the background */
 }
 
 .new-expense__actions {
     text-align: right;
+    color: #E1E5EA; /* Light grayish-blue text color from earlier */
 }

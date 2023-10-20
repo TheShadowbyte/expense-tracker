@@ -1,5 +1,5 @@
 .new-expense {
-    background-color: #a892ee;
+    background-color: #3A3F4B; /* Updated to secondary background */
     padding: 1rem;
     margin: 2rem auto;
     width: 50rem;
@@ -13,26 +13,28 @@
     font: inherit;
     cursor: pointer;
     padding: 1rem 2rem;
-    border: 1px solid #40005d;
-    background-color: #40005d;
-    color: white;
+    border: 1px solid #00796B; /* Deep teal */
+    background-color: #00796B; /* Deep teal */
+    color: #E1E5EA; /* Light grayish-blue text color */
     border-radius: 12px;
     margin-right: 1rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* For hover and active effects */
 }
 
 .new-expense button:hover,
 .new-expense button:active {
-    background-color: #510674;
-    border-color: #510674;
+    background-color: #005D56; /* Slightly darker teal */
+    border-color: #005D56;
 }
 
 .new-expense button.alternative {
-    color: #220131;
+    color: #E1E5EA; /* Light grayish-blue text color */
     border-color: transparent;
     background-color: transparent;
 }
 
 .new-expense button.alternative:hover,
 .new-expense button.alternative:active {
-    background-color: #ddb3f8;
+    background-color: #282c34; /* Primary background color */
+    color: #00796B; /* Deep teal for text on hover */
 }
