@@ -4,12 +4,17 @@ import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
 
-  return (
-    <div className="App">
-        <NewExpense />
-        <Expenses />
-    </div>
-  );
+    const addExpenseHandler = expense => {
+        console.log('In App.js');
+        console.log(expense);
+    };
+
+    return (
+        <div className="App">
+            <NewExpense onAddExpense={addExpenseHandler} />
+            <Expenses />
+        </div>
+    );
 
 }
 
