@@ -2,10 +2,9 @@ import './ExpensesFilter.css';
 
 const ExpensesFilter = (props) => {
 
-    const listOfYears = ['All', '2022', '2021', '2020', '2019'];
+    const listOfYears = ['All', '2023', '2022', '2021', '2020', '2019'];
 
     const dropdownChangeHandler = (event) => {
-
         props.onFilterExpenses(event.target.value);
     };
 

@@ -4,33 +4,20 @@ import Card from "./Card";
 import './Expenses.css';
 import ExpensesFilter from "./ExpensesFilter";
 
-function Expenses(props) {
+const Expenses = (props) => {
 
-    const listOfYears = ['2022', '2021', '2020', '2019'];
     const [filteredYear, setFilteredYear] = useState('All');
 
     let filterInfoText = '';
+    let filteredItemsArray = [];
 
     if (filteredYear !== 'All') {
-
-        filterInfoText = 'Data for years ';
-
-        // Filter the not selected values array to remove the selected value from the notSelectedValues array
-        const notSelectedYears = listOfYears.filter(value => value !== filteredYear);
-
-        if (notSelectedYears.length > 1) {
-            let lastYear = notSelectedYears.pop();
-            filterInfoText += notSelectedYears.join(", ") + " & " + lastYear;
-        }
-        else if (notSelectedYears.length === 1) {
-            filterInfoText += notSelectedYears[0];
-        }
-
-        filterInfoText += ' is hidden.';
-
+        filterInfoText = 'Data for ' + filteredYear + ' is shown.';
+        filteredItemsArray = props.items.filter(expense => expense.date.getFullYear().toString() === filteredYear);
     }
     else {
         filterInfoText = 'Data for all years is shown.';
+        filteredItemsArray = props.items;
     }
 
     const filterExpensesHandler = (selectedYear) => {
@@ -41,7 +28,7 @@ function Expenses(props) {
         <Card className="expenses">
             <ExpensesFilter selected={filteredYear} onFilterExpenses={filterExpensesHandler} />
             <p>{filterInfoText}</p>
-            {props.items.map(expense => (
+            {filteredItemsArray.map(expense => (
                 <ExpenseItem
                     key={expense.id}
                     title={expense.title}
