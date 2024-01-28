@@ -1,4 +1,4 @@
-# Expense Tracker 💸
+# Expense Tracker 💸 (NOTE: THIS PROJECT IS STILL IN DEVELOPMENT, DO NOT USE)
 
 An intuitive, user-friendly expense tracker built using React. Keep track of your expenses, set budgets, and view insights on your spending habits.
 
